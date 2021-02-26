@@ -138,9 +138,9 @@
 				
 		</code></pre>
 		<ul>
-		<li>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore.</li>
-		<li>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The vectors are are also stored in the PointStore.</li>
-		<li>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">k-D Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. We use it for search of nearest vectors.</li>
+		<li>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore. The TripleStore is where qualitative and symbolic knowledge is stored. It can store informally structured data, answer queries and apply forward chaining rules.</li>
+		<li>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector-Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The vectors are are also stored in the PointStore. The VectorStore captures the meaning of things, where meaning is expressed as a multidimensional value. It works a bit like word embedding, except the vectors are transparent (identified vector components) rather than black boxes (anonymous vector components).</li>
+		<li>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">kD-Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. It is able to quickly find the closest vectors to a given meaning, bringing an additional (and important) feature to the VectorStore original toolbox. Its main purpose is to search the nearest known vectors of a calculated vector.</li>
 		</ul>
 		<br>
 		<img src="./sortof.jpg" style="max-width:100%">
