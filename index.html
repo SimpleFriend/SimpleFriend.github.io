@@ -137,11 +137,13 @@
 		[gen] Internal output
 				
 		</code></pre>
-		<p>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore.</p>
-		<p>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The vectors are are also stored in the PointStore.</p>
-		<p>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">k-D Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. We use it for search of nearest vectors.</p>
-
-
+		<ul>
+		<li>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore.</li>
+		<li>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The vectors are are also stored in the PointStore.</li>
+		<li>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">k-D Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. We use it for search of nearest vectors.</li>
+		</ul>
+		<br>
+		<img src="./sortof.jpg" style="max-width:100%">
 
 
         <h3>The Github repo is open <span class="date">2021_02_23</span></h3>
