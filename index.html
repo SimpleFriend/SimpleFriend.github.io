@@ -138,14 +138,27 @@
 				
 		</code></pre>
 		<ul>
-		<li>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore. The TripleStore is where qualitative and symbolic knowledge is stored. It can store informally structured data, answer queries and apply forward chaining rules.</li>
-		<li>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector-Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The vectors are are also stored in the PointStore. The VectorStore captures the meaning of things, where meaning is expressed as a multidimensional value. It works a bit like word embedding, except the vectors are transparent (identified vector components) rather than black boxes (anonymous vector components).</li>
-		<li>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">kD-Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. It is able to quickly find the closest vectors to a given meaning, bringing an additional (and important) feature to the VectorStore original toolbox. Its main purpose is to search the nearest known vectors of a calculated vector.</li>
+		<li>The <b>TripleStore</b> uses <a href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a> for storage and retrieval of triples. Subjects, predicates and objects of a triple are strings. These strings are keys to access vectors from the VectorStore. The TripleStore is where qualitative and symbolic knowledge is stored. It can store structured and unstructured data, answer queries and apply forward chaining rules.</li>
+		<li>The <b>VectorStore</b> uses <a href="https://github.com/stanleyfok/vector-object#vector-object">Vector-Object</a>, an N-dimensional vector implementation that's capable of meaning-vector calculations. The VectorStore captures the meaning of things, where meaning is expressed as a multidimensional value. It works a bit like word embedding, except the vectors are transparent (identified vector components) rather than black boxes (anonymous vector components). Vectors are also stored in the PointStore. </li>
+		<li>The <b>PointStore</b> uses <a href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">kD-Tree</a>, a space-partitioning data structure for organizing points in a k-dimensional space. It is able to quickly find the closest vectors to a given meaning, bringing an additional (and important) feature to the VectorStore original toolbox. Its main purpose is to search the nearest known vectors of a calculated vector, which is supposed to provide recognition capabilities.</li>
 		</ul>
 		<br>
 		<a href="./sortof.jpg"><img src="./sortof.jpg" style="max-width:100%"></a>
+		<br>
+		<br>
+		<p>An important aspect of the global design is the presence of a "feedback loop" that sends descriptions of what's happening inside the program back to its input, so the program can observe its own behavior, predict it, and eventually understand it. This could produce some interesting effects.</p>
+		
+        <a class="button" href="https://github.com/levelgraph/levelgraph#levelgraph">LevelGraph</a>
+        <a class="button" href="https://github.com/stanleyfok/vector-object#vector-object">Vector Objects</a>
+        <a class="button" href="https://github.com/ubilabs/kd-tree-javascript#k-d-tree-javascript-library">kD Tree</a>
 
 
+
+
+		<br>
+		<br>
+		<br>
+		<br>
         <h3>The Github repo is open <span class="date">2021_02_23</span></h3>
     
         <p>Jamie has her own Github repo.</p>
